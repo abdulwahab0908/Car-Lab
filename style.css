@@ -1,0 +1,150 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('image/background-image.jpeg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    /* background: rgba(0, 0, 0, 0.5); Optional: Add background to header for better visibility */
+}
+
+.logo {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scale(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .btnLogin-pop {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+}
+
+.navigation .btnLogin-pop:hover {
+    background: #fff;
+    color: #162938;
+}
+
+/* Content Styles */
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 150px; /* To avoid overlapping with fixed header */
+}
+
+.search-container {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#searchInput {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #fff;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+#searchButton {
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-left: none;
+    background: #fff;
+    color: #162938;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+#searchButton:hover {
+    background: #162938;
+    color: #fff;
+}
+
+.car-logos {
+    display: flex;
+    gap: 20px;
+}
+
+.car-logo {
+    width: 100px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.car-logo:hover {
+    transform: scale(1.1);
+}
+
+/* Car Details Page Styles */
+.car-details {
+    text-align: center;
+    color: #fff;
+}
+
+.car-details img {
+    margin-top: 20px;
+    border-radius: 10px;
+}
